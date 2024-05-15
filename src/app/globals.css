@@ -2,32 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.page-layout {
+  @apply bg-slate-400
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.header-one {
+  @apply text-4xl
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.profile-image {
+  @apply rounded-full size-1/4
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.content-card {
+  @apply rounded-2xl m-2 p-8 text-white bg-slate-600
+}
+
+.header-component {
+  @apply flex justify-around items-center p-4 bg-sky-300
+}
+
+.content-wrapper-component {
+  @apply flex flex-wrap justify-around p-4 bg-gradient-to-b from-sky-300 to-transparent
 }
